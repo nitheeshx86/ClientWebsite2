@@ -1,0 +1,136 @@
+.landing {
+  background: 
+    linear-gradient(45deg, #7ec8e3, #1c3f66),
+    linear-gradient(-45deg, #a1c4fd, rgb(0, 174, 255));
+  background-image:
+    radial-gradient(circle at 15% 15%, rgba(0, 155, 251, 0.5) 0%, transparent 40%),
+    radial-gradient(circle at 85% 85%, rgba(0, 234, 255, 0.5) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(3, 90, 252, 0.3) 0%, transparent 60%);
+  background-size: 200% 200%;
+  animation: chaotic-flow 30s ease-in-out infinite;
+
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: sticky;
+  top: 0;
+
+}
+
+.h1 {
+  font-size: 7vw;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 420;
+  color: lightgray;
+  line-height: 0.8;
+  padding-bottom: 40px;
+  word-spacing: 10px;
+}
+
+.h1 span{
+  font-family: 'Miss Fajardose';
+  font-size: 14vw;
+  background: linear-gradient(to bottom, white 20%, blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  padding: 15px 20px 15px 0;
+
+}
+
+
+@media (min-width: 1024px) {
+  .h1 {
+    font-size: 6vw;
+  }
+  .h1 span{
+    font-size: 8vw;
+  }
+}
+
+.landing::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 15% 15%, rgba(135, 206, 250, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 85% 85%, rgba(70, 130, 180, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(100, 149, 237, 0.05) 0%, transparent 60%);
+  animation: texture-flow 30s ease-in-out infinite;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+@keyframes chaotic-flow {
+  0% {
+    background-position: 0% 0%, 100% 100%, 50% 0%;
+  }
+  25% {
+    background-position: 100% 50%, 0% 25%, 75% 100%;
+  }
+  50% {
+    background-position: 50% 100%, 75% 0%, 0% 50%;
+  }
+  75% {
+    background-position: 25% 25%, 50% 75%, 100% 25%;
+  }
+  100% {
+    background-position: 0% 0%, 100% 100%, 50% 0%;
+  }
+}
+
+@keyframes texture-flow {
+  0%, 100% { opacity: 0.3; }
+  33% { opacity: 0.6; }
+  66% { opacity: 0.4; }
+}
+
+
+.container { display: inline-block}
+.typewriter {
+  font-family: monospace;
+  border-right: 5px solid;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation:
+    typing 5s steps(30),
+    cursor .4s step-end infinite ;
+  font-size: 20px;
+}
+
+.typewriter p{
+  padding-top: 20px;
+}
+
+/* cursor blinking */
+@keyframes cursor{
+  50%{ border-color: transparent}
+}
+
+@keyframes typing{
+  from {width: 0}
+}
+
+.down-arrow {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: auto;
+  opacity: 0.5;
+  animation: arrowBounce 4s ease-in-out infinite;
+}
+
+@keyframes arrowBounce {
+  0%   { transform: translateX(-50%) translateY(0); }
+  50%  { transform: translateX(-50%) translateY(15px); }
+  100% { transform: translateX(-50%) translateY(0); }
+}

@@ -1,0 +1,15 @@
+.circle{
+    height: 64px;
+    width: 64px;
+    border-radius: 64px;
+    background-color: rgba(169, 199, 255, 0.2);
+    position: fixed;
+    pointer-events: none;
+    top:0;
+    left:0;
+    z-index: 5000;
+    mix-blend-mode: ;
+
+  pointer-events: none;
+}
+
