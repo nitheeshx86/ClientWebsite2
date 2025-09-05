@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import './App.css'
 import Lenis from 'lenis'
-import Navbar from "./components/navbar.jsx";
+import Navbar from "./components/Navbar.jsx";
 import Circle from "./components/Circle.jsx";
 import Landing from "./components/sections/Landing.jsx"; 
 import One from "./components/sections/One.jsx";
